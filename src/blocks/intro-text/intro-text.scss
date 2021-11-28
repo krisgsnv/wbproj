@@ -1,0 +1,19 @@
+.intro-text {
+    font-weight: 100;
+    margin: 3.75rem 0 3.33rem 0;
+    width: 39%;
+    max-height: 34%;
+    overflow: auto;
+    @media screen and (max-width: $screen-sm) {
+        width: 100%;
+        margin: 0;
+        position: relative;
+    }
+    &__p {
+        margin-bottom: 1.66rem;
+        display: block;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

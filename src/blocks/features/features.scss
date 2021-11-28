@@ -1,0 +1,38 @@
+.features {
+    height: 42vmin;
+    width: 42vmin;
+    border-radius: 50%;
+    background-color: $features-bg;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: -27%;
+    text-transform: capitalize;
+    @media screen and (max-width: $screen-sm) {
+        height: 45vmin;
+        width: 45vmin;
+    }
+    &__list {
+        margin-left: 5vw;
+        list-style: none;
+        max-width: 64%;
+        letter-spacing: .055em;
+        max-height: 75%;
+        overflow: hidden;
+        @media screen and (max-width: $screen-sm) {
+            margin-left: 23%;
+        }
+    }
+    &__item {
+        margin-bottom: 6%;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.66rem;
+    }
+    &__item-property {
+        font-weight: 500;
+    }
+
+
+}

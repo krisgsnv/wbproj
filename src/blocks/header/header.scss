@@ -1,0 +1,95 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 6vh;
+    @media screen and (max-width: $screen-md) {
+        align-items: center;
+    }
+    &__logo-pic {
+        width: 14vw;
+        min-width: 100px;
+        max-width: 280px;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+        gap: 3.5vw;
+        transition: all 0.3s ease;
+        max-width: 40%;
+        @media screen and (max-width: $screen-sm) {
+            background-color: white;
+            width: 100vw;
+            z-index: 2;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: -100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 5vh;
+            padding-top: 20%;
+            max-width: 100vw;
+        }
+
+    }
+    &__list.header__list_open {
+        right: 0;
+    }
+    &__link {
+        text-transform: uppercase;
+        letter-spacing: 0.055em;
+        color: $header-links;
+        font-size: 0.875rem;
+        font-weight: 400;
+        white-space: nowrap;
+        @media screen and (max-width: $screen-sm) {
+            font-size: 1.2rem;
+        }
+    }
+    &__burger-icon {
+        display: none;
+        transition: 0.3s;
+    }
+    &__burger-icon.header__list_open {
+        transform: rotate(45deg);
+        &::before {
+            opacity: 0;
+        }
+        &::after {
+            transform: rotate(90deg) translate(-10px, 0px);
+        }
+    }
+    @media screen and (max-width: $screen-sm) {
+        &__burger-icon {
+            z-index: 2;
+            display: block;
+            height: 2px;
+            width: 30px;
+            background-color: $header-links;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                height: inherit;
+                background-color: inherit;
+                width: inherit;
+                position: absolute;
+                bottom: 10px;
+            }
+            &::after {
+                content: "";
+                display: block;
+                height: inherit;
+                background-color: inherit;
+                width: inherit;
+                position: absolute;
+                top: 10px;
+            }
+        }
+    }
+ 
+}
+
+

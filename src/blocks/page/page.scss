@@ -1,0 +1,108 @@
+// Общие стили тегов, подключение шрифтов, стили для класса main
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+::-webkit-scrollbar {
+  width: .4vw;
+  background-color: $product-selection-bg;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb;
+}
+html, body {
+  font-size: $font-size;
+  @media screen and (max-width: $screen-sm) {
+    font-size: $font-size--mobile;
+  }
+}
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 1.9vmax;
+  word-break: break-word;
+  font-family: $font-family;
+  line-height: $line-height;
+  text-align: left;
+  color: $text-color;
+  background-color: $body-bg;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  height: calc(100vh - 2 * 1.9vmax - 6vh); // Рассчитываем высоту основного блока (вся высота страницы - отступы body - высота header)
+  @media screen and (max-width: $screen-sm) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  transition: color 0.3s;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $link-color--hover;
+  }
+
+  &:visited {
+     color: $link-color--hover;
+  }
+}
+
+ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  line-height: inherit;
+}
+
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('../fonts/sf-compact-display-medium-webfont.woff'),
+  url('../fonts/sf-compact-display-medium-webfont.woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('../fonts/sf-compact-display-regular-webfont.woff'),
+  url('../fonts/sf-compact-display-regular-webfont.woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('../fonts/sf-compact-display-thin-webfont.woff'),
+  url('../fonts/sf-compact-display-thin-webfont.woff2');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Compact Display';
+  src: url('../fonts/sf-compact-display-ultralight-webfont.woff'),
+  url('../fonts/sf-compact-display-ultralight-webfont.woff2');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}

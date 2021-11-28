@@ -1,0 +1,44 @@
+.room-demo {
+    width: 55%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+    @media screen and (max-width: $screen-sm) {
+        max-height: 45%;
+        order: -1;
+        position: relative;  
+        margin: 0 auto;
+        &__mobile-arrow {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            bottom: 3%;
+            left: 50%;
+            margin-right: 15px;
+            transform: rotate(45deg);
+            border-bottom: $header-links 2px solid;
+            border-right: $header-links 2px solid;
+            transition: transform .3s ease;
+            &_active {
+                transform: rotate(-135deg);
+            }
+        }   
+    }
+    &__pic {
+        border-radius: 18px;
+        object-fit: contain;
+        object-position: left;
+        @media screen and (max-width: $screen-sm) {
+            object-position: center;           
+        }
+    }
+    &__lamp {
+        position: absolute;
+        max-width: 11vw;
+        top: -16%;
+        object-fit: contain;
+        max-height: 36%;
+    }
+
+}

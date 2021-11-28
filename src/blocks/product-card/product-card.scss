@@ -1,0 +1,20 @@
+.product-card {
+    border-top: $product-card-border;
+    margin-left: -5vw;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    @media screen and (max-width: $screen-sm) {
+        justify-content: space-around;
+        width: auto;
+        margin: 0 -1.9vmax;
+    }
+    &__pic {
+        height: 42vmin;
+        max-width: 33%;
+        object-fit: contain;
+        object-position: top;
+        z-index: 1;
+        margin-right: 1.3%;
+    }
+}
